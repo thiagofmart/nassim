@@ -1,0 +1,80 @@
+@startuml
+title WebSite
+file Home
+file Servicos[
+    <b>SERVIÇOS
+    
+    ----
+    Outbound Marketing (prospeção ativa de clientes)
+    
+    ----
+    Sites (criaçao, edição, correções ou otimizações)
+
+    ----
+    Porducao de Conteudo (artigos de blog, ebooks, email, mkt, etc)
+
+    ----
+    Gestao Redes Sociais (facebook, instagram, linkedin, twitter, etc)
+    
+    ----
+    SEO (destacar sua empresa no Google)
+
+    ----
+    Links Patrocinados (anúncios no Google, portais e nas rede sociais)
+
+    ----
+    Design Grafico (logotipo, cartões de visita, folder, banner, etc)
+    
+    ----
+    Design para Web (email marketing, identidade visual para redes sociais, etc)
+]
+
+file Segmentos [
+    <b> SEGMENTOS 
+
+    ----
+    Infoprodutos (e-books, podcasts, webinários, masterclasses, videocasts, screencast e whitepaper)
+
+    ----
+    E-commerce
+]
+file Sobre [
+    <b> SOBRE
+
+    ----
+    Sobre
+
+    ---- 
+    Certificados - Google (ResultadosDigitais e Parcerias)
+
+    ----
+    Missão - Promover oportunidades reais de negócios para
+    nossos clientes, sejam eles B2B ou B2C.
+
+    ----
+    Visão - Ser reconhecida como agência geradora de
+    oportunidades a cada novo cliente a ponto de receber
+    indicações naturais a partir do bom trabalho executado.
+
+    ----
+    Valores
+
+    ----
+    Depoimentos
+]
+file Resultados 
+file Contato
+file Blog
+file Clientes
+file SejaCliente
+Home -do-> Servicos
+Home -do-> Segmentos
+Home -do-> Sobre
+Home -do-> Resultados
+Home -do-> Blog
+Home -do-> Clientes
+Home -do-> Contato
+
+
+
+@enduml

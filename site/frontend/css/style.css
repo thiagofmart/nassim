@@ -45,7 +45,8 @@ body {
     cursor: pointer;
 }
 .hero button:hover{
-    background-color: #14181F;
+    background-color: #fff;
+    color:#000;
 }
 .hero h1{
     font-size: 40px;

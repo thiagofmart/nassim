@@ -4,6 +4,8 @@
     --black: #04080F;
     --white: #FBFFFE;
     --neutral: #BABCC3;
+    --blue: #1C77C3;
+    --width-header: 600px;
 }
 * {
     margin: 0;
@@ -17,10 +19,11 @@ body {
     position: relative;
     display: flex;
     width: 100%;
-    height: 600px;
+    height: var(--width-header);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #fff;
     z-index: 1;
     
@@ -33,14 +36,23 @@ body {
     border: none;
     border-radius: 25px;
     margin-top: 20px;
-    background-color: var(--black);
-    color: white;
+    background: rgb(2,0,36);
+background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+    color: var(--white);
     font-family: Ubuntu;
     font-weight: 600;
+    font-size: 18px;
     cursor: pointer;
 }
 .hero button:hover{
     background-color: #14181F;
+}
+.hero h1{
+    font-size: 40px;
+    padding: 10px;
+}
+.hero p {
+    font-size: 20px;
 }
 video{
     width: 100%; 
@@ -48,5 +60,5 @@ video{
     position: absolute;
     z-index: -1;
     object-fit: cover;
-    height: 600px;
+    height: var(--width-header);
 }

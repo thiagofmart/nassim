@@ -66,6 +66,7 @@ file Resultados
 file Contato
 file Blog
 file Clientes
+file SejaCliente
 Home -do-> Servicos
 Home -do-> Segmentos
 Home -do-> Sobre

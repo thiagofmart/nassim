@@ -1,34 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root{
-  --black: #04080F;
-}
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Ubuntu, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.base{
-  max-width: 1200px;
-  margin: 0 300px;
+    --primary: #D33F49;
+    --black: #04080F;
+    --white: #FBFFFE;
+    --neutral: #BABCC3;
 }
 
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: var(--black);
+    @apply bg-[#04080F];
+  }
+}
+@layer components {
+  .navItems {
+    @apply text-[#FBFFFE] text-2xl ;
+  }
+  .navLinks {
+    @apply px-4 py-2 hover:bg-black hover:text-[#D33F49]
+  }
+  .serviceCard {
+    @apply bg-[#BABCC3] border-b-black p-10 text-center border-b-2 m-3
+  }
+  .blogCard {
+    @apply bg-[#BABCC3] border-b-black p-10 text-center border-b-2 m-3
   }
 }

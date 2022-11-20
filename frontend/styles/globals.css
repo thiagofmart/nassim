@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
-
+:root{
+  --black: #04080F;
+}
 html,
 body {
   padding: 0;
@@ -16,12 +17,18 @@ a {
   box-sizing: border-box;
 }
 
+.base{
+  max-width: 1200px;
+  margin: 0 300px;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: black;
+    background: var(--black);
   }
 }

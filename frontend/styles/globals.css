@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,19 +14,51 @@
 @layer base {
   body {
     @apply bg-[#04080F];
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+  }
+  h1{
+    @apply text-2xl;
   }
 }
 @layer components {
   .navItems {
-    @apply text-[#FBFFFE] text-2xl ;
+    @apply text-[#FBFFFE] text-lg;
+  }
+  .navContact{
+    @apply bg-[#D33F49] rounded px-4 py-2;
   }
   .navLinks {
-    @apply px-4 py-2 hover:bg-black hover:text-[#D33F49]
-  }
-  .serviceCard {
-    @apply bg-[#BABCC3] border-b-black p-10 text-center border-b-2 m-3
+    @apply px-4 py-2 hover:bg-white hover:text-[black] rounded;
   }
   .blogCard {
-    @apply bg-[#BABCC3] border-b-black p-10 text-center border-b-2 m-3
+    @apply bg-[#fff] border-b-black border-b-2 m-3 text-black rounded;
+  }
+  .mainContainer{
+    @apply max-w-screen-2xl m-auto py-5;
+  }
+  .serviceCard {
+    @apply bg-[#fff] p-7 m-2;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+  .globalIcon{
+    @apply w-8 h-8;
+  }
+  .button{
+    @apply py-2 mt-5 px-5 rounded-md bg-[#D33F49] text-lg;
+  }
+  .footer-slogan{
+    @apply w-auto h-auto font-bold text-4xl text-end;
+    overflow-wrap: break-word;
+  }
+  .contactCard {
+    @apply bg-white border-b-black  text-justify rounded w-full;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  }
+  .input {
+    @apply m-2 p-3 bg-[#F2F2F2] rounded;
+  }
+  .footerLinks{
+    @apply text-gray-300 hover:underline;
   }
 }

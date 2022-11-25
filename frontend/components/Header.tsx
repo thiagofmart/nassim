@@ -1,26 +1,48 @@
 import React from 'react'
-
+import {useState, useEffect} from 'react'
 const Header = () => {
+  const [fixed, setFixed] = useState(false)
+
+  function handleNavFixedOnOrOff(){
+    if(scrollY > 0){
+      setFixed(true)
+    }else{
+      setFixed(false)
+    }
+  }
+
+  useEffect( ()=> {
+    window.addEventListener('scroll', handleNavFixedOnOrOff)
+
+    return () => {
+      window.removeEventListener("scroll", handleNavFixedOnOrOff)
+    }
+  })
+
   return (
-    <header className="w-full max-w-[1200px] m-auto h-auto">
-      <div className="flex p-5">
-        <img src="" className="px-3 navItems" alt="Nassim" height="70px"/>
-        <ul className="hidden md:flex space-x-4">
-          <li className="navItems"><a className="navLinks" href="">Inicio</a></li>
-          <li className="navItems"><a className="navLinks" href="">Sobre</a></li>
-          <li className="navItems"><a className="navLinks" href="">Serviços</a></li>
-          <li className="navItems"><a className="navLinks" href="">Contato</a></li>
-        </ul>
-      </div>
-      <div className="flex justify-between">
-        <div className="text-white flex-1 justify-center items-center flex flex-col space-y-3">
-          <h1 className="font-bold text-lg">We develop for human, not alien.</h1>
-          <p className="text-sm">Change the world with your idea.</p>
-          <button className="py-[0.15rem] px-2 rounded-md bg-[#D33F49]">Start Now</button>
+
+
+
+    <header className="h-auto mainContainer py-3">
+      <div className={fixed ? 'fixed bg-black w-full' : 'block' }>
+
+        <div className='flex justify-between'>
+        <div className="flex">
+          <a href="/"><img src="" className="px-3 navItems" alt="Nassim" /></a>
+          <ul className="hidden md:flex space-x-4">
+            <li className="navItems"><a className="navLinks" href="#servicos">Serviços</a></li>
+            <li className="navItems"><a className="navLinks" href="">Sobre</a></li>
+            <li className="navItems"><a className="navLinks" href="#blog">Blog</a></li>
+          </ul>
         </div>
-        <div className="flex-1 md:block hidden">
-          <img className="headerImage" src="./assets/domore-header.jpeg" alt="" />
+        <div className='flex items-center'>
+          <ul>
+            <li className="navItems"><a className="navContact" href="">Contato</a></li>
+          </ul>
+
         </div>
+        </div>
+
       </div>
     </header>
   )

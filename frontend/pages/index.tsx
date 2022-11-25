@@ -6,15 +6,17 @@ import Image from 'next/image'
 import Blog from '../components/Blog'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>tailwind with nextjs</title>
+        <title>Nassim</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
+      <Hero/>
       <main>
         <Services/>
         <Blog/>
